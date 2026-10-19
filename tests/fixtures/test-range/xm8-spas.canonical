@@ -1,0 +1,18 @@
+FVR_BC2_RANGE 1
+name=xm8-spas
+level=Levels/sp_02
+route=menu
+weapons=XM8_sp_s@Primary1,SPAS12_sp@Primary2
+select=XM8_sp_s
+clear_inventory=true
+skip_cinematics=true
+ammo=native
+skip_intro=true
+fast_startup=true
+cutscenes=false
+ai=false
+god=true
+checkpoints=false
+unlocks=true
+timeout=300
+ready_timeout=120

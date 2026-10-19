@@ -1,0 +1,17 @@
+FVR_BC2_RANGE 1
+name=sp02-xm8
+notes=Fallback scenario: SP_02 default kit already carries XM8_sp_s
+level=Levels/sp_02
+route=manual
+weapons=XM8_sp_s@Primary1
+clear_inventory=false
+skip_cinematics=true
+ammo=native
+menu=false
+skip_intro=true
+cutscenes=false
+ai=false
+god=true
+checkpoints=false
+timeout=600
+ready_timeout=300

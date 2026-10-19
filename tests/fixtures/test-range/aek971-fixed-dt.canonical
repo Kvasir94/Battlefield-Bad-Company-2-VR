@@ -1,0 +1,19 @@
+FVR_BC2_RANGE 1
+name=aek971-fixed-dt
+level=Levels/sp_02
+route=menu
+weapons=AEK971_sp@Primary1
+clear_inventory=true
+skip_cinematics=true
+ammo=full
+menu=false
+skip_intro=true
+cutscenes=false
+ai=false
+god=true
+checkpoints=false
+unlocks=true
+unlimited_mags=false
+fixed_dt=0.0166667
+timeout=300
+ready_timeout=120

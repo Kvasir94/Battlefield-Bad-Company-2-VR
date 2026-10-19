@@ -1,0 +1,7 @@
+Client.Level Levels/sp_02
+Client.LoadMenu false
+Client.DisableMovies true
+Server.DisableCutscenes true
+Server.IsAiEnabled false
+Server.IsGodMode true
+Server.DisableCheckpoints true

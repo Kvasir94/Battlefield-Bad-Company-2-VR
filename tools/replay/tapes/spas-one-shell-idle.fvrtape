@@ -1,0 +1,7 @@
+FVR_BC2_INPUT 1 10000 1
+#! weapon=SPAS12_sp precondition=none anchor=world after_end=idle source=synthetic_spas_one_shell_hands_idle
+#! notes=fire_one_shell_then_idle_15s_for_the_pump_hold_test
+# 1 s idle, 10-tick right trigger, 15 s idle
+100 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 511 0 0 0 0 0 -0.2 -0.4 -0.3 0 0 0 1 -0.2 -0.4 -0.3 0 0 0 1 511 0 0 0 0 0 0 -0.25 -0.45 0 0 0 1 0 0 0 0 0 0 1
+10 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 511 0 0 0 0 0 -0.2 -0.4 -0.3 0 0 0 1 -0.2 -0.4 -0.3 0 0 0 1 511 0 1 0 0 0 0 -0.25 -0.45 0 0 0 1 0 0 0 0 0 0 1
+1500 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 511 0 0 0 0 0 -0.2 -0.4 -0.3 0 0 0 1 -0.2 -0.4 -0.3 0 0 0 1 511 0 0 0 0 0 0 -0.25 -0.45 0 0 0 1 0 0 0 0 0 0 1

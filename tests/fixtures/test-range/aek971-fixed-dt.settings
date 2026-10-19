@@ -1,0 +1,11 @@
+Client.Level Levels/sp_02
+Client.LoadMenu false
+Client.DisableMovies true
+Server.DisableCutscenes true
+Server.IsAiEnabled false
+Server.IsGodMode true
+Server.DisableCheckpoints true
+Server.UnrestrictedUnlocks true
+Client.UnrestrictedUnlocks true
+Server.HasUnlimitedMags false
+Game.ForceDeltaTime 0.0166667

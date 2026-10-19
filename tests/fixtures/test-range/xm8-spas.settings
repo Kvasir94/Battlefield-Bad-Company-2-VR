@@ -1,0 +1,9 @@
+Client.Level Levels/sp_02
+Client.DisableMovies true
+Client.IsFastStartupEnabled true
+Server.DisableCutscenes true
+Server.IsAiEnabled false
+Server.IsGodMode true
+Server.DisableCheckpoints true
+Server.UnrestrictedUnlocks true
+Client.UnrestrictedUnlocks true

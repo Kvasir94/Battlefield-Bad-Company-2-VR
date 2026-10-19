@@ -1,0 +1,27 @@
+{
+  "schema": "fvr.bc2.replay_scenario.v1",
+  "name": "spas-shell-reload",
+  "mechanism": "single-round shell insertion: pouch, guide, seat per shell (state 12 -> 11 per shell)",
+  "weapon": "SPAS12_sp",
+  "tape": "../tapes/spas-shell-reload.fvrtape",
+  "sim": {"supported": false, "reason": "the offline simulator models the detachable-magazine consumer only"},
+  "live": {"trace_switches": ["-PhysicalReload"], "seconds": 45},
+  "analyzer_rules": {"min_reloads": 1, "max_seat_credit_ms": 1000, "deny_cancel_reasons": ["interaction_rejected"]},
+  "rules": [
+    {"id": "fvr_order", "type": "sequence", "steps": ["begin", "pouch_start", "seat", "transfer[copy=server]", "credit", "end"]},
+    {"id": "native_single_round", "type": "sequence",
+     "steps": ["firing_state[copy=server,to=10]", "firing_state[copy=server,to=11]", "firing_state[copy=server,to=12]",
+               "transfer[copy=server]", "firing_state[copy=server,to=2]"]},
+    {"id": "shells_seated", "type": "count", "match": "seat", "min": 1},
+    {"id": "shells_credited", "type": "count", "match": "credit", "min": 1},
+    {"id": "loaded_gained", "type": "ammo_delta", "copy": "server", "loaded": ">0", "conserve": true},
+    {"id": "every_seat_transfers", "type": "within", "from": "seat", "to": "transfer[copy=server]", "max_ms": 1500, "every": true},
+    {"id": "no_shell_without_seat", "label": "native single-round reload must not run ahead of insertion",
+     "type": "never", "match": "transfer", "before": "seat"},
+    {"id": "no_takeover_after_cancel", "label": "2026-10-01 SPAS12: native transfer after a cancel",
+     "type": "never", "match": "transfer[copy=server]", "after": "cancel"},
+    {"id": "no_interaction_rejected", "type": "never", "match": "cancel[reason=interaction_rejected]"},
+    {"id": "no_auto_reload", "type": "never", "match": "auto_reload[suppressed=false]"},
+    {"id": "no_drops", "type": "never", "match": "dropped"}
+  ]
+}
